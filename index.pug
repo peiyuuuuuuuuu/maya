@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src='https://kit.fontawesome.com/bdf4d726ef.js' crossorigin='anonymous')
+        link(rel="stylesheet", href="/dist/main.css")
+        title peiyu
+    body 
+     include layout/header.pug
+     .main
+      .container 
+       .namecard
+        .namecard_left
+         img(src="http://picsum.photos/200/200", alt="")
+         P.name Maya<br>Nelson
+         .blueline
+         P.pro PROJECT MANAGER 
+         .link
+           ul
+            li
+             i.fa-brands.fa-facebook-f
+            li
+             i.fa-brands.fa-twitter
+            li
+             i.fa-brands.fa-linkedin-in
+            li
+             i.fa-brands.fa-instagram
+
+        .namecard_right
+         P.hello <strong>Hello</strong>
+         P.slogan Here's who I am & What I do
+         .btn
+           a(href="" class='btn_resume') RESUME
+           a(href="" class='btn_projects') PROJECTS
+
+         P.context  I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+          |<br><br>I’m a great place for you to tell a story and let your users know a little more about you.
+    
+      include layout/footer.pug 
+
+
