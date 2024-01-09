@@ -1,0 +1,1 @@
+function init(){const s=document.querySelector(".menu-btn"),t=document.querySelector(".phone-menu");s.addEventListener("click",(function(e){s.classList.contains("active")?s.classList.remove("active"):s.classList.add("active"),t.classList.contains("is-show")?t.classList.remove("is-show"):t.classList.add("is-show")}))}document.addEventListener("DOMContentLoaded",init);

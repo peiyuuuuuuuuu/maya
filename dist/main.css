@@ -64,7 +64,6 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: fixed;
-  z-index: 2;
 }
 .header::before {
   content: "";
@@ -117,6 +116,7 @@ table {
   width: 40px;
   display: inline-block;
   position: absolute;
+  z-index: 10;
 }
 
 .phone-menu {
@@ -130,6 +130,17 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
 }
 .phone-menu a {
   color: black;
@@ -188,59 +199,44 @@ table {
     right: 2em;
     top: 1.4em;
   }
+  .menu-btn .menu-btn__bar {
+    width: 1.3em;
+    height: 0.3em;
+    border-radius: 0.15em;
+    position: relative;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: #0051FF;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
   .menu-btn .menu-btn-2 {
     width: 2.5em;
-    height: 0.3em;
-    border-radius: 0.15em;
-    position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-color: #0051FF;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
   }
   .menu-btn .menu-btn-1 {
-    width: 1.3em;
-    height: 0.3em;
-    border-radius: 0.15em;
-    position: relative;
     top: 30%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-color: #0051FF;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
   }
   .menu-btn .menu-btn-3 {
-    width: 1.3em;
-    height: 0.3em;
-    border-radius: 0.15em;
-    position: relative;
     top: 70%;
     left: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-color: #0051FF;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
   }
-  .menu-btn:hover .menu-btn-2 {
+  .menu-btn.active .menu-btn__bar {
     background-color: rgb(46, 46, 46);
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
   }
-  .menu-btn:hover .menu-btn-1 {
-    background-color: rgb(46, 46, 46);
+  .menu-btn.active .menu-btn-1 {
     -webkit-transform: translateX(20%) translateY(150%) rotate(-135deg);
             transform: translateX(20%) translateY(150%) rotate(-135deg);
   }
-  .menu-btn:hover .menu-btn-3 {
-    background-color: rgb(46, 46, 46);
+  .menu-btn.active .menu-btn-2 {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .menu-btn.active .menu-btn-3 {
     -webkit-transform: translateX(-20%) translateY(-150%) rotate(45deg);
             transform: translateX(-20%) translateY(-150%) rotate(45deg);
   }
-  .menu-btn:hover .phone-menu {
+  .phone-menu.is-show {
     visibility: initial;
   }
 }
