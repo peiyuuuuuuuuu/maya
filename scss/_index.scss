@@ -125,21 +125,19 @@
             line-height: 2.5em;
             margin-right: 10px;
             background-color: #0051FF;
+            border: solid 1px #0051FF;
             border-radius: 1.3em;
             border: solid 1px;
-            
-            & a{
-                color: white;
-                text-decoration: none;
-
+            color: white;
+            text-decoration: none;
+            transition-duration: 0.5s;
             }
 
-            & a:hover{
+            & .btn_resume:hover{
+                color: #0051FF;
                 background-color: white;
+                border: solid 1px #0051FF;
             }
-        }
-        
-        
 
         .btn_projects{
             width: 9em;
@@ -149,8 +147,19 @@
             border: solid 1px;
             border-radius: 1.3em;
             border: solid 1px;
+            color: rgb(30, 30, 30);
+            text-decoration: none;
+            transition-duration: 0.5s; 
         }
+
+            & .btn_projects:hover{
+                color: white;
+                background-color: #0051FF;
+                border: solid 1px #0051FF;
+            }
+        
     }
+    
     .context{
         font-weight: 300;
         line-height: 1.5em;
@@ -164,7 +173,7 @@
 
 @media (max-width: 768px) {
     .main{
-        position: absolute;top: 12em;
+        position: absolute;
         // border: solid 1px;
     }
 
