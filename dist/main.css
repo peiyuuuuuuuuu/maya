@@ -1,5 +1,4 @@
-/* the wonderful resetcss file by peiyu :DDDDD */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); /* the wonderful resetcss file by peiyu :DDDDD */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,6 +50,10 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -147,7 +150,7 @@ table {
   color: black;
   text-decoration: none;
   font-size: 1.3em;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -158,6 +161,9 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.phone-menu .phonemenu-first {
+  color: #0051FF;
 }
 
 @media (max-width: 768px) {
@@ -378,7 +384,6 @@ table {
   background-color: #0051FF;
   border: solid 1px #0051FF;
   border-radius: 1.3em;
-  border: solid 1px;
   color: white;
   text-decoration: none;
   -webkit-transition-duration: 0.5s;
@@ -386,7 +391,7 @@ table {
 }
 .namecard .btn_resume:hover {
   color: #0051FF;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   border: solid 1px #0051FF;
 }
 .namecard .btn_projects {
@@ -412,15 +417,75 @@ table {
   font-weight: 300;
   line-height: 1.5em;
   padding-right: 70px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
   .main {
     position: absolute;
   }
+  .container::before {
+    content: " ";
+    width: 100%;
+    height: 900px;
+    background-color: #E6DACF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 100px;
+  }
+  .namecard {
+    width: 400px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .namecard .namecard_left {
+    width: 100%;
+    margin: auto;
+    height: 525px;
+    position: relative;
+    top: -190px;
+  }
+  .namecard .namecard_left .pro {
+    visibility: hidden;
+  }
+  .namecard .namecard_right {
+    padding-left: 28px;
+    margin: auto;
+    width: 100%;
+    background-color: rgba(183, 131, 131, 0);
+    position: relative;
+    top: -190px;
+  }
+  .namecard .namecard_right .hello {
+    font-size: 45px;
+    padding-top: 35px;
+  }
+  .namecard .namecard_right .slogan {
+    font-size: 22px;
+  }
+  .namecard .namecard_right .context {
+    font-size: 17px;
+    padding-right: 28px;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-top: -15px;
+    position: relative;
+    top: -45px;
+  }
+  .namecard .namecard_right .btn {
+    font-size: 1em;
+    position: relative;
+    top: -310px;
+    left: -10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .footer {
+  background-color: #fff;
   width: 100%;
   height: 7em;
   display: -webkit-box;

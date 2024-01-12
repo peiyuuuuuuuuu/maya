@@ -78,6 +78,7 @@
             margin: 0px 10px;
             display: inline-flex;
         }    
+        
     }
 }
 
@@ -127,7 +128,6 @@
             background-color: #0051FF;
             border: solid 1px #0051FF;
             border-radius: 1.3em;
-            border: solid 1px;
             color: white;
             text-decoration: none;
             transition-duration: 0.5s;
@@ -135,7 +135,7 @@
 
             & .btn_resume:hover{
                 color: #0051FF;
-                background-color: white;
+                background-color: rgba(255, 255, 255, 0);
                 border: solid 1px #0051FF;
             }
 
@@ -164,7 +164,7 @@
         font-weight: 300;
         line-height: 1.5em;
         padding-right: 70px;
-        padding-top: 30px;
+        padding-top: 20px;
 
     }
 
@@ -176,7 +176,72 @@
         position: absolute;
         // border: solid 1px;
     }
+    .container{   
+        // border: solid 1px;
+        &::before{
+            content: ' ';
+            width: 100%;
+            height: 900px;
+            
+            background-color: #E6DACF;
+            display: flex;
+            position: relative;top: 100px;
+        }
+    }    
 
+   .namecard{
+    width: 400px;
+    // border: solid 1px;
+
+    flex-wrap: wrap;
+    .namecard_left{
+        width:100%;
+        margin: auto;
+        height: 525px;
+        position: relative; top:-190px;
+        .pro{
+            visibility: hidden;
+        }
+
+    }
+    .namecard_right{
+        padding-left: 28px;
+        margin: auto;
+        width: 100%;
+        // border: solid 1px;
+        background-color:#b7838300;
+        position: relative; top:-190px;
+
+        & .hello {
+            font-size: 45px;
+            padding-top: 35px;
+        }
+        & .slogan{
+            font-size: 22px;
+        }
+        .context{
+            font-size: 17px;
+            padding-right: 28px;
+            font-weight: 300;
+            padding-top: 0px;
+            margin-top: -15px;
+            position: relative;top: -45px;
+        }
+
+        .btn{
+            // border: solid 1px;
+            font-size: 1em;
+            position: relative;
+            top: -310px;left: -10px;
+            justify-content: center;
+    
+        }
+
+
+    }
+
+
+   }
     
 }
     
