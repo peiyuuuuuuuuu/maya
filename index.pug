@@ -4,11 +4,11 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         script(src='https://kit.fontawesome.com/bdf4d726ef.js' crossorigin='anonymous')
-        link(rel="stylesheet", href="/dist/main.css")
+        link(rel="stylesheet", href="main.css")
         title peiyu
     body 
      include layout/header.pug
-     .main
+     main
       .container 
        .namecard
         .namecard_left
@@ -37,8 +37,7 @@ html(lang="en")
          P.context  I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
           |<br><br>I’m a great place for you to tell a story and let your users know a little more about you.
     
-      include layout/footer.pug 
-      script(src="./menu.js")
+      include layout/footer.pug
       
 
 

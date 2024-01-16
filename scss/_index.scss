@@ -1,7 +1,15 @@
-.main{
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+main{
     width: 100%;
-    position: absolute;top: 6em;
-    }
+    margin-top: 6em;
+}
 .container{
     width: 100%;
     position: relative;

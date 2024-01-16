@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bdf4d726ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>RUSUME</title>
+    <style>
+      html, body {
+        overflow: hidden;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 6em 1fr 7em;
+      }
+      
+      main {
+        grid-row: 2 / 3;
+        margin-top: 0;
+        overflow-y: auto;
+        padding: 2rem;
+      }
+      
+      p {
+        line-height: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .footer {
+        grid-row: 3 / 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header"> 
+        <P><Span class=title>Maya Nelson </Span><Span class=dis> /</Span><Span class=pro>PROJECT MANAGER</Span></P>
+        <div class="nav"><a class="nav-first" href="/dist">ABOUT ME</a><a href="/dist/resume2.html">RESUME</a><a href="">PROJECT</a><a href="">CONTACT</a></div>
+        <div class="menu-btn"> 
+          <div class="menu-btn__bar menu-btn-1"></div>
+          <div class="menu-btn__bar menu-btn-2"></div>
+          <div class="menu-btn__bar menu-btn-3"></div>
+        </div>
+      </div>
+      <div class="phone-menu"> <a class="phonemenu-first" href="">ABOUT ME</a><a href="">RESUME</a><a href="">PROJECT</a><a href="">CONTACT</a></div>
+      <main></main>
+      <div class="footer">
+        <div class="copyright"> 
+          <h2>© 2035 by Maya Nelson.<br>Powered and secured by<a href="" >Wix</a> </h2>
+        </div>
+        <div class="information">
+          <table>
+            <thead> 
+              <tr>
+                <th>Call</th>
+                <th>Write</th>
+                <th>Follow</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr>
+                <td>123-456-789</td>
+                <td>info@mysite.com</td>
+                <td><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-instagram"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <script src="./menu.js"></script>
+    </div>
+  </body>
+</html>
