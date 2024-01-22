@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+.resume-wrapper{
+    width: 100%;
+    height: 100vh;
+    // border: solid 6px;
+    display: grid;
+    grid-template-rows:1fr 7em;
+}
+resume_main{
+    background-color: #E6DACF;
+    grid-row: 1/2;
+    margin-top: 6em;
+    
+}
+resume_head{
+    height: 180px;
+    display: block;
+    // border:solid 1px ;
+    line-height: 180px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    &::before{
+        content: " ";
+        background-color: #0051FF;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 100px;
+        // left:00px;
+        transform:translateX(-480%) translateY(-50%) ;
+        
+    }
+}
+resume_nav{
+    height: 90px;
+    // border: solid 1px;
+    width: 725px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    & h2{
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+    & btn{
+        border: solid 2px #0051FF;
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 5px;
+        padding: 10px 15px;
+        color: white;
+        background-color: #0051FF;
+        border-radius: 18px;
+    }
+    & btn:hover{
+        color: black;
+        background-color: #ffffff00;
+        border: solid 2px #0051FF;
+        transition-duration: 0.5s;
+    }
+}
+
+
+resume_section{
+    height: 375px;
+    width: 725px;
+    // border: solid 1px;
+    background-color: #ffffff;
+    margin: auto;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 180%;
+    box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
+
+    resume_section_left{
+        width: 100%;
+        // border: solid 1px;
+        padding-left: 10%;
+    
+     & h3{
+        color: #0051FF;
+        font-size: 20px;
+        font-weight: 700;
+    }
+     & h4{
+        font-size: 15px;
+    }
+     & P{
+        font-size: 12px;
+        font-weight: 300;
+     }
+    }
+    resume_section_right{
+        // border: solid 1px;
+        padding-right: 50px;
+    }
+}
+
+resume_section_last{
+    width: 725px;
+    height: 510px;
+    background-color: white;
+    // border: solid 1px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
+    display: flex;
+}
+    
+    resume_section_last_contant{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 300%;
+        // flex-wrap: wrap;
+        // border: solid 1px;
+        margin-left: 5%;
+    
+    & h2{
+        font-size: 20px;
+        font-weight: 600;
+        // border: solid 1px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    ul{
+        list-style-type: square;
+        list-style-position: outside;
+        // 為什麼這邊沒有 QAQ
+
+    li{
+        font-size: 12px;
+        font-weight: 300;
+        width: 300px;
+        display: inline-block;        
+        
+    }
+    
+}
+}
+
+
+
+    
+    
+
+
+
+
+
+
+.footer{
+    grid-row: 2/3;
+}
