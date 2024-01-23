@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src='https://kit.fontawesome.com/bdf4d726ef.js' crossorigin='anonymous')
+        link(rel="stylesheet", href="main.css")        
+        title PROJECT
+    body 
+    .project-wrapper 
+      include layout/header.pug
+      project_main
+       project_head 
+        h2 Project
+       project_head_text 
+        P I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+       
+       project_section 
+        project_section_left
+         h3 Project name 01
+         h4 Role Title
+         P I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+        project_section_right
+         img(src="http://picsum.photos/320/400?random=1", alt="")
+       
+       project_section 
+        project_section_left
+         h3 Project name 02
+         h4 Role Title
+         P I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+        project_section_right
+         img(src="http://picsum.photos/320/400?random=2", alt="")  
+
+       project_section
+        project_section_left
+         h3 Project name 03
+         h4 Role Title
+         P I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+        project_section_right
+         img(src="http://picsum.photos/320/400?random=3", alt="")
+
+      include layout/footer.pug  

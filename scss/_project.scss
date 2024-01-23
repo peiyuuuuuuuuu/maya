@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+.project-wrapper{
+    width: 100%;
+    height: 100vh;
+    // border: solid 6px;
+    display: grid;
+    grid-template-rows:1fr 7em;
+}
+project_main{
+    background-color: #E6DACF;
+    grid-row: 1/2;
+    margin-top: 6em;
+}
+Project_head{
+    width: 725px;
+    height: 180px;
+    line-height: 180px;
+    // border: solid 1px;
+    display: block;
+    margin: auto;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    transform:  translateX(32px);
+    &::before{
+        content: " ";
+        background-color: #0051FF;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 90px; 
+        transform:translateX(-480%) translateY(-50%) ;
+        }
+}
+project_head_text{
+    width: 725px;
+    height: 90px;
+    // border: solid 1px;
+    display: block;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 80px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    P{
+        text-align: center;
+    }
+}
+project_section{
+    width: 760px;
+    height: 400px;
+    display: flex;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
+    // border: solid 1px;
+    margin-top: 10px;
+    margin-bottom: 65px;
+
+
+    project_section_left{
+        width: 440px;
+        display: block;
+        // border: solid 1px;
+        padding: 60px 40px;
+        position: relative;
+
+        &::before{
+            content: " ";
+            background-color: #0051FF;
+            height: 50px;
+            width: 10px;
+            position: absolute;
+            left:0px;
+            transform: translateY(3px);
+        }
+        & h3{
+            font-size: 22px;
+            font-weight: 700;
+            color: #0051FF;
+            line-height: 30px;
+        }
+        & h4{
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+        & P{
+            display: block;
+            // border: solid 1px;
+            margin-top: 40px;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 30px;
+            padding: 0px 20px;
+        }
+        
+    }
+}
+ 
