@@ -1,47 +1,44 @@
-*{
-    box-sizing: border-box;
-}
 
-html {
-    font-family: "Poppins", sans-serif;
-}
-
-.resume-wrapper{
-    width: 100%;
-    height: 100vh;
-    // border: solid 6px;
-    display: grid;
-    grid-template-rows:1fr 7em;
-}
-resume_main{
+.resume_main{
     background-color: #E6DACF;
     grid-row: 1/2;
     margin-top: 6em;
     
 }
-resume_head{
-    height: 180px;
+.resume_head{
+    // height: 180px;
     display: block;
+    padding: 12vh 0;
     // border:solid 1px ;
-    line-height: 180px;
+    // line-height: 180px;
     text-align: center;
-    transform: translateX(32px);
+    // transform: translateX(32px);
     font-size: 30px;
     font-weight: 700;
     position: relative;
-    &::before{
-        content: " ";
-        background-color: #0051FF;
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        top: 90px;
-        // left:00px;
-        transform: translateX(-480%) translateY(-50%) ;
-        
+    @media (max-width: 768px) {
+        padding: 8vh 0; 
+    }
+    @media (max-width: 375px) {
+        padding: 6vh 0; 
+    }
+    .resume_title {
+        display: inline-block;
+        &::before{
+            content: "";
+            display: inline-block;
+            background-color: #0051FF;
+            height: 20px;
+            width: 20px;
+            margin-right: .5rem;
+            // position: absolute;
+            // top: 90px;
+            // left:00px;
+            // transform: translateX(-480%) translateY(-50%) ;
+        }
     }
 }
-resume_nav{
+.resume_nav{
     height: 90px;
     // border: solid 1px;
     width: 725px;
@@ -55,7 +52,7 @@ resume_nav{
         font-weight: 700;
         margin-left: 5px;
     }
-    & btn{
+    & .btn{
         border: solid 2px #0051FF;
         font-size: 12px;
         font-weight: 400;
@@ -65,7 +62,7 @@ resume_nav{
         background-color: #0051FF;
         border-radius: 18px;
     }
-    & btn:hover{
+    & .btn:hover{
         color: black;
         background-color: #ffffff00;
         border: solid 2px #0051FF;
@@ -74,7 +71,7 @@ resume_nav{
 }
 
 
-resume_section{
+.resume_section{
     height: 375px;
     width: 725px;
     // border: solid 1px;
@@ -87,7 +84,7 @@ resume_section{
     line-height: 180%;
     box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
 
-    resume_section_left{
+    .resume_section_left{
         width: 100%;
         // border: solid 1px;
         padding-left: 10%;
@@ -105,13 +102,13 @@ resume_section{
         font-weight: 300;
      }
     }
-    resume_section_right{
+    .resume_section_right{
         // border: solid 1px;
         padding-right: 50px;
     }
 }
 
-resume_section_last{
+.resume_section_last{
     width: 725px;
     height: 510px;
     background-color: white;
@@ -121,9 +118,12 @@ resume_section_last{
     margin-bottom: 100px;
     box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
     display: flex;
+    ul {
+        list-style-type: circle;
+    }
 }
     
-    resume_section_last_contant{
+.resume_section_last_contant{
         
         display: flex;
         flex-direction: column;

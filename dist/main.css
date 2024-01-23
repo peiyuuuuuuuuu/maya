@@ -53,6 +53,55 @@ table {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 7em;
+  grid-template-rows: 1fr 7em;
+}
+
+main {
+  width: 100%;
+  margin-top: 6em;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+.container::before {
+  content: " ";
+  width: 40%;
+  height: 825px;
+  background-color: #E6DACF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
@@ -79,7 +128,7 @@ table {
   top: 2.4em;
   left: 2em;
 }
-.header P {
+.header h1 {
   font-size: 1em;
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -245,35 +294,6 @@ table {
     visibility: initial;
   }
 }
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-}
-
-main {
-  width: 100%;
-  margin-top: 6em;
-}
-
-.container {
-  width: 100%;
-  position: relative;
-  background-color: white;
-}
-.container::before {
-  content: " ";
-  width: 40%;
-  height: 825px;
-  background-color: #E6DACF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .namecard {
   width: 800px;
   height: 525px;
@@ -490,25 +510,7 @@ main {
             justify-content: center;
   }
 }
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-}
-
-.resume-wrapper {
-  width: 100%;
-  height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 7em;
-  grid-template-rows: 1fr 7em;
-}
-
-resume_main {
+.resume_main {
   background-color: #E6DACF;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -516,29 +518,37 @@ resume_main {
   margin-top: 6em;
 }
 
-resume_head {
-  height: 180px;
+.resume_head {
   display: block;
-  line-height: 180px;
+  padding: 12vh 0;
   text-align: center;
-  -webkit-transform: translateX(32px);
-          transform: translateX(32px);
   font-size: 30px;
   font-weight: 700;
   position: relative;
 }
-resume_head::before {
-  content: " ";
+@media (max-width: 768px) {
+  .resume_head {
+    padding: 8vh 0;
+  }
+}
+@media (max-width: 375px) {
+  .resume_head {
+    padding: 6vh 0;
+  }
+}
+.resume_head .resume_title {
+  display: inline-block;
+}
+.resume_head .resume_title::before {
+  content: "";
+  display: inline-block;
   background-color: #0051FF;
   height: 20px;
   width: 20px;
-  position: absolute;
-  top: 90px;
-  -webkit-transform: translateX(-480%) translateY(-50%);
-          transform: translateX(-480%) translateY(-50%);
+  margin-right: 0.5rem;
 }
 
-resume_nav {
+.resume_nav {
   height: 90px;
   width: 725px;
   display: -webkit-box;
@@ -552,12 +562,12 @@ resume_nav {
       -ms-flex-align: center;
           align-items: center;
 }
-resume_nav h2 {
+.resume_nav h2 {
   font-size: 20px;
   font-weight: 700;
   margin-left: 5px;
 }
-resume_nav btn {
+.resume_nav .btn {
   border: solid 2px #0051FF;
   font-size: 12px;
   font-weight: 400;
@@ -567,7 +577,7 @@ resume_nav btn {
   background-color: #0051FF;
   border-radius: 18px;
 }
-resume_nav btn:hover {
+.resume_nav .btn:hover {
   color: black;
   background-color: rgba(255, 255, 255, 0);
   border: solid 2px #0051FF;
@@ -575,7 +585,7 @@ resume_nav btn:hover {
           transition-duration: 0.5s;
 }
 
-resume_section {
+.resume_section {
   height: 375px;
   width: 725px;
   background-color: #ffffff;
@@ -595,27 +605,27 @@ resume_section {
   -webkit-box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
           box-shadow: -10px 10px 20px 5px rgb(203, 202, 202);
 }
-resume_section resume_section_left {
+.resume_section .resume_section_left {
   width: 100%;
   padding-left: 10%;
 }
-resume_section resume_section_left h3 {
+.resume_section .resume_section_left h3 {
   color: #0051FF;
   font-size: 20px;
   font-weight: 700;
 }
-resume_section resume_section_left h4 {
+.resume_section .resume_section_left h4 {
   font-size: 15px;
 }
-resume_section resume_section_left P {
+.resume_section .resume_section_left P {
   font-size: 12px;
   font-weight: 300;
 }
-resume_section resume_section_right {
+.resume_section .resume_section_right {
   padding-right: 50px;
 }
 
-resume_section_last {
+.resume_section_last {
   width: 725px;
   height: 510px;
   background-color: white;
@@ -628,8 +638,11 @@ resume_section_last {
   display: -ms-flexbox;
   display: flex;
 }
+.resume_section_last ul {
+  list-style-type: circle;
+}
 
-resume_section_last_contant {
+.resume_section_last_contant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,17 +656,17 @@ resume_section_last_contant {
   line-height: 300%;
   margin-left: 5%;
 }
-resume_section_last_contant h2 {
+.resume_section_last_contant h2 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 30px;
   margin-top: 30px;
 }
-resume_section_last_contant ul {
+.resume_section_last_contant ul {
   list-style-type: square;
   list-style-position: outside;
 }
-resume_section_last_contant ul li {
+.resume_section_last_contant ul li {
   font-size: 12px;
   font-weight: 300;
   width: 300px;
